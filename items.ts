@@ -3,7 +3,7 @@
  */
 export interface Item {
   name: string;
-  category: [SynthesisCategory];
+  category: SynthesisCategory[];
 }
 
 /**
@@ -18,6 +18,14 @@ export interface SynthesisCategory {
  */
 export interface MaterialItem extends Item {
 }
+export const MaterialItem = {
+  new: (name: string, category: SynthesisCategory[]): Item => {
+    return {
+      name,
+      category,
+    };
+  },
+};
 
 /**
  * 調合アイテム
