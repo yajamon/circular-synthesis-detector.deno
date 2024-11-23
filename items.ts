@@ -24,6 +24,7 @@ export interface MaterialItem extends Item {
  */
 export interface SynthesisItem extends Item {
   synthesisLevel: number;
+  recipe: SynthesisRecipe;
 }
 
 /**
