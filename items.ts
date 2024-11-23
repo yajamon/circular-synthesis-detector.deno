@@ -2,6 +2,6 @@
  * アイテムの共通インターフェース
  */
 export interface Item {
-    name: string;
-    category: [string];
+  name: string;
+  category: [string];
 }
