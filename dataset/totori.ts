@@ -23,4 +23,10 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "specific", item: { name: "水" } },
     ],
   }),
+  SynthesisItem.new("薬のもと", [{ name: "薬の材料" }], 15, {
+    items: [
+      { kind: "category", category: { name: "薬の材料" } },
+      { kind: "category", category: { name: "植物類" } },
+    ],
+  }),
 ];
