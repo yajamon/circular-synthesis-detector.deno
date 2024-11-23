@@ -25,3 +25,23 @@ export interface MaterialItem extends Item {
 export interface SynthesisItem extends Item {
   synthesisLevel: number;
 }
+
+/**
+ * 調合レシピ
+ */
+export interface SynthesisRecipe {
+  items: [SynthesisRecipeElement];
+}
+
+/**
+ * 調合レシピの要素
+ *
+ * 調合レシピの要素は、特定のアイテムか、特定のカテゴリに属するアイテムを要求する。
+ */
+type SynthesisRecipeElement = {
+  kind: "specific";
+  item: Item;
+} | {
+  kind: "category";
+  category: SynthesisCategory;
+};
