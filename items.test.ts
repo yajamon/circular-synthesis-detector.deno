@@ -42,4 +42,12 @@ Deno.test("SynthesisItem生成", () => {
   // Assert
   assert(item.name === "ヒーリングサルヴ");
   assert(item.category[0].name === "薬品");
+  assert(item.synthesisLevel === 1);
+  assert(item.recipe.items.length === 3);
+  assert(item.recipe.items[0].kind === "category");
+  assert(item.recipe.items[0].category.name === "植物類");
+  assert(item.recipe.items[1].kind === "specific");
+  assert(item.recipe.items[1].item.name === "マンドラゴラの根");
+  assert(item.recipe.items[2].kind === "specific");
+  assert(item.recipe.items[2].item.name === "水");
 });
