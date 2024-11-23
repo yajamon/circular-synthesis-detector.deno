@@ -3,5 +3,12 @@
  */
 export interface Item {
   name: string;
-  category: [string];
+  category: [SynthesisCategory];
+}
+
+/**
+ * 調合カテゴリ
+ */
+export interface SynthesisCategory {
+  name: string;
 }
