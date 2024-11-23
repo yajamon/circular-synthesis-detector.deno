@@ -34,12 +34,27 @@ export interface SynthesisItem extends Item {
   synthesisLevel: number;
   recipe: SynthesisRecipe;
 }
+export const SynthesisItem = {
+  new: (
+    name: string,
+    category: SynthesisCategory[],
+    synthesisLevel: number,
+    recipe: SynthesisRecipe,
+  ): SynthesisItem => {
+    return {
+      name,
+      category,
+      synthesisLevel,
+      recipe,
+    };
+  },
+};
 
 /**
  * 調合レシピ
  */
 export interface SynthesisRecipe {
-  items: [SynthesisRecipeElement];
+  items: SynthesisRecipeElement[];
 }
 
 /**
