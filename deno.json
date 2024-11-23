@@ -1,4 +1,7 @@
 {
+  "name": "@yajamon/circular-synthesis-detector",
+  "version": "0.1.0",
+  "license": "MIT",
   "tasks": {
     "dev": "deno run --watch main.ts"
   },
