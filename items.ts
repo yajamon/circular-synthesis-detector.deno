@@ -2,9 +2,11 @@
  * アイテムの共通インターフェース
  */
 export interface Item {
-  name: string;
+  name: ItemName;
   category: SynthesisCategory[];
 }
+
+type ItemName = string;
 
 /**
  * 調合カテゴリ
@@ -64,7 +66,7 @@ export interface SynthesisRecipe {
  */
 type SynthesisRecipeElement = {
   kind: "specific";
-  item: Item;
+  item: { name: ItemName };
 } | {
   kind: "category";
   category: SynthesisCategory;
