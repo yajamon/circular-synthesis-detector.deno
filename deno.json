@@ -10,5 +10,10 @@
   },
   "exports": {
     ".": "./mod.ts"
+  },
+  "publish": {
+    "exclude": [
+      ".vscode"
+    ]
   }
 }
