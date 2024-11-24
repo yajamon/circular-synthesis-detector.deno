@@ -80,6 +80,8 @@ export const detectCircularSynthesisPathsBottomUp = (
   if (!entrypint) {
     return [];
   }
+  const result: SynthesisItem[][] = [];
+
   queue.push([entrypint, [entrypint]]);
   visited.add(entrypint.name);
   while (queue.length > 0) {
@@ -99,7 +101,7 @@ export const detectCircularSynthesisPathsBottomUp = (
             const next = synthesisItemMap.get(nextItemName)!;
             const res = [...path, next];
             // console.log("目的の循環調合を発見した", res.map((p) => p.name));
-            return [res];
+            result.push(res);
           }
 
           if (visited.has(nextItemName)) {
@@ -131,7 +133,7 @@ export const detectCircularSynthesisPathsBottomUp = (
           const next = synthesisItemMap.get(nextItemName)!;
           const res = [...path, next];
           // console.log("目的の循環調合を発見した", res.map((p) => p.name));
-          return [res];
+          result.push(res);
         }
 
         if (visited.has(nextItemName)) {
@@ -149,7 +151,5 @@ export const detectCircularSynthesisPathsBottomUp = (
     }
   }
 
-  return [
-    [entrypint, entrypint],
-  ];
+  return result;
 };
