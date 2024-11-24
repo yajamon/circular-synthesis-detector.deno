@@ -48,6 +48,16 @@ export const materialItems: MaterialItem[] = [
     { name: "薬の材料" },
   ]),
   MaterialItem.new("何かのタマゴ", [{ name: "食材" }, { name: "燃料" }]),
+  MaterialItem.new("七色葡萄", [{ name: "木の実" }]),
+  MaterialItem.new("パルマの実", [{ name: "木の実" }, { name: "水" }]),
+  MaterialItem.new("フレスベリー", [{ name: "木の実" }, { name: "調味料" }]),
+  MaterialItem.new("アブラ木の実", [
+    { name: "木の実" },
+    { name: "食材" },
+    { name: "燃料" },
+  ]),
+  MaterialItem.new("ハチの巣", [{ name: "ハチの巣" }, { name: "火薬" }]),
+  MaterialItem.new("銀のハチの巣", [{ name: "ハチの巣" }, { name: "火薬" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
