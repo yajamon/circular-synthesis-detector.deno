@@ -191,4 +191,37 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "水" } },
     ],
   }),
+  SynthesisItem.new("中和剤・青", [{ name: "中和剤" }], 1, {
+    items: [
+      { kind: "category", category: { name: "魚介類" } },
+      { kind: "category", category: { name: "水" } },
+    ],
+  }),
+  SynthesisItem.new("中和剤・黄", [{ name: "中和剤" }], 1, {
+    items: [
+      { kind: "category", category: { name: "砂" } },
+      { kind: "category", category: { name: "水" } },
+    ],
+  }),
+  SynthesisItem.new("中和剤・緑", [{ name: "中和剤" }], 1, {
+    items: [
+      { kind: "category", category: { name: "植物" } },
+      { kind: "category", category: { name: "水" } },
+    ],
+  }),
+  SynthesisItem.new("研磨剤", [{ name: "雑貨" }], 2, {
+    items: [
+      { kind: "specific", item: { name: "白灰砂" } },
+      { kind: "category", category: { name: "砂" } },
+      { kind: "category", category: { name: "鉱石" } },
+    ],
+  }),
+  SynthesisItem.new("ゼッテル", [{ name: "雑貨" }, { name: "燃料" }], 9, {
+    items: [
+      { kind: "specific", item: { name: "紙くず" } },
+      { kind: "category", category: { name: "植物" } },
+      { kind: "category", category: { name: "水" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
 ];
