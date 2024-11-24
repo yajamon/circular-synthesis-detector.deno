@@ -27,6 +27,14 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("甘露岩", [{ name: "石材" }, { name: "調味料" }]),
   MaterialItem.new("風化した石材", [{ name: "石材" }]),
   MaterialItem.new("古代の石柱", [{ name: "石材" }]),
+  MaterialItem.new("セキネツ鉱", [{ name: "鉱石" }, { name: "火薬" }]),
+  MaterialItem.new("アクア鉱", [{ name: "鉱石" }, { name: "水" }]),
+  MaterialItem.new("イナズマ鉱", [{ name: "鉱石" }, { name: "原石" }]),
+  MaterialItem.new("アマタイト鉱", [{ name: "鉱石" }]),
+  MaterialItem.new("コベリナイト", [{ name: "鉱石" }]),
+  MaterialItem.new("小さな晶石", [{ name: "原石" }, { name: "神秘の力" }]),
+  MaterialItem.new("正体不明の原石", [{ name: "原石" }]),
+  MaterialItem.new("大貝の白玉", [{ name: "原石" }, { name: "魚介類" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
