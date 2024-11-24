@@ -224,4 +224,29 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new(
+    "インゴット",
+    [{ name: "インゴット" }, { name: "金属" }],
+    4,
+    {
+      items: [
+        { kind: "specific", item: { name: "アマタイト鉱" } },
+        { kind: "category", category: { name: "鉱石" } },
+        { kind: "category", category: { name: "燃料" } },
+      ],
+    },
+  ),
+  SynthesisItem.new(
+    "ブロンズアイゼン",
+    [{ name: "インゴット" }, { name: "金属" }],
+    8,
+    {
+      items: [
+        { kind: "specific", item: { name: "コベリナイト" } },
+        { kind: "specific", item: { name: "アマタイト鉱" } },
+        { kind: "category", category: { name: "鉱石" } },
+        { kind: "category", category: { name: "燃料" } },
+      ],
+    },
+  ),
 ];
