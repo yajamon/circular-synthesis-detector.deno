@@ -18,6 +18,17 @@ export const detectCircularSynthesisPathsBottomUp = (
   };
   const categoriesMap = new Map<SynthesisCategory, Set<CategoryMapElement>>();
 
+  // 素材を要求するアイテムを逆引きできるようにする
+  type _ReverceRecipeMapKey = {
+    kind: "specific";
+    name: ItemName;
+  } | {
+    kind: "category";
+    name: SynthesisCategory;
+  };
+  type ReverceRecipeMapKey = `specific-${string}` | `category-${string}`;
+  const reverseRecipeMap = new Map<ReverceRecipeMapKey, Set<ItemName>>();
+
   // 探索のためにマップに変換
   for (const item of materiarItems) {
     materialItemMap.set(item.name, item);
@@ -38,14 +49,66 @@ export const detectCircularSynthesisPathsBottomUp = (
       }
       categoriesMap.get(category)!.add({ kind: "synthesis", name: item.name });
     }
+    // レシピから逆引きできるようにする
+    for (const el of item.recipe.items) {
+      if (el.kind === "category") {
+        const key: ReverceRecipeMapKey = `category-${el.category.name}`;
+        if (!reverseRecipeMap.has(key)) {
+          reverseRecipeMap.set(key, new Set());
+        }
+        reverseRecipeMap.get(key)!.add(item.name);
+      }
+    }
   }
 
+  // console.log(materialItemMap);
+  // console.log(synthesisItemMap);
+  // console.log(categoriesMap);
+  // console.log(reverseRecipeMap);
+
   // 探索する
-  const queue: SynthesisItem[] = []; // できれば配列じゃないほうが良いのでは…
+  type Path = SynthesisItem[];
+  const queue: [SynthesisItem, Path][] = []; // できれば配列じゃないほうが良いのでは…
   const visited = new Set<ItemName>();
   const entrypint = synthesisItemMap.get(targetItemName);
   if (!entrypint) {
     return [];
+  }
+  queue.push([entrypint, [entrypint]]);
+  visited.add(entrypint.name);
+  while (queue.length > 0) {
+    const [current, path] = queue.shift()!;
+
+    // currentを素材にする調合を探す
+    for (const cat of current.category) {
+      const key: ReverceRecipeMapKey = `category-${cat.name}`;
+      if (!reverseRecipeMap.has(key)) {
+        // このカテゴリを要求する調合はない
+        // console.log("このカテゴリを要求する調合はない", key);
+        continue;
+      }
+      for (const nextItemName of reverseRecipeMap.get(key)!) {
+        // 目的の循環調合を発見した
+        if (nextItemName === targetItemName) {
+          const next = synthesisItemMap.get(nextItemName)!;
+          const res = [...path, next];
+          // console.log("目的の循環調合を発見した", res.map((p) => p.name));
+          return [res];
+        }
+
+        if (visited.has(nextItemName)) {
+          // 探索済み
+          continue;
+        }
+        const next = synthesisItemMap.get(nextItemName);
+        if (!next) {
+          // 素材になる調合がない
+          continue;
+        }
+        queue.push([next, [...path, next]]);
+        visited.add(next.name);
+      }
+    }
   }
 
   return [
