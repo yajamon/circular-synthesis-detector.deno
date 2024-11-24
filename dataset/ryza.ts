@@ -58,6 +58,16 @@ export const materialItems: MaterialItem[] = [
   ]),
   MaterialItem.new("ハチの巣", [{ name: "ハチの巣" }, { name: "火薬" }]),
   MaterialItem.new("銀のハチの巣", [{ name: "ハチの巣" }, { name: "火薬" }]),
+  MaterialItem.new("アイヒェロア", [{ name: "きのこ" }]),
+  MaterialItem.new("群体きのこ", [{ name: "きのこ" }]),
+  MaterialItem.new("ユピトピニオン", [{ name: "きのこ" }, { name: "気体" }]),
+  MaterialItem.new("きれいな貝殻", [{ name: "魚介類" }]),
+  MaterialItem.new("サルディン", [{ name: "魚介類" }]),
+  MaterialItem.new("エグゾフィッシュ", [{ name: "魚介類" }, { name: "気体" }]),
+  MaterialItem.new("プルムル", [{ name: "魚介類" }, { name: "鉱石" }]),
+  MaterialItem.new("シュラブ", [{ name: "魚介類" }]),
+  MaterialItem.new("ナナホシ", [{ name: "虫" }]),
+  MaterialItem.new("ハニーアント", [{ name: "虫" }, { name: "調味料" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
