@@ -81,6 +81,13 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("大きな骨", [{ name: "動物素材" }]),
   MaterialItem.new("ヘビの脱け殻", [{ name: "動物素材" }]),
   MaterialItem.new("魔石の欠片", [{ name: "神秘の力" }]),
+  MaterialItem.new("スピリットフラワー", [
+    { name: "花" },
+    { name: "神秘の力" },
+  ]),
+  MaterialItem.new("大ぷに玉", [{ name: "ぷにぷに" }]),
+  MaterialItem.new("ヤギ肉", [{ name: "重要" }]),
+  MaterialItem.new("塩草", [{ name: "植物" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
