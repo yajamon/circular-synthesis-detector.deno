@@ -49,6 +49,6 @@ export const detectCircularSynthesisPathsBottomUp = (
   }
 
   return [
-    [entrypint],
+    [entrypint, entrypint],
   ];
 };

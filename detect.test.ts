@@ -35,6 +35,7 @@ Deno.test("循環調合を探す", () => {
   // Assert
   assert(result.length === 1);
   assert(result[0][0].name === "薬のもと");
+  assert(result[0][1].name === "薬のもと");
 });
 
 Deno.test("素材で探してもエラーにならない", () => {
