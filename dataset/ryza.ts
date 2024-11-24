@@ -91,6 +91,29 @@ export const materialItems: MaterialItem[] = [
 ];
 
 export const synthesisItems: SynthesisItem[] = [
+  SynthesisItem.new("爆粉うに", [{ name: "爆弾" }], 2, {
+    items: [
+      { kind: "category", category: { name: "うに" } },
+      { kind: "category", category: { name: "火薬" } },
+      { kind: "category", category: { name: "燃料" } },
+    ],
+  }),
+  SynthesisItem.new("クラフト", [{ name: "爆弾" }], 4, {
+    items: [
+      { kind: "category", category: { name: "うに" } },
+      { kind: "category", category: { name: "火薬" } },
+      { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("フラム", [{ name: "爆弾" }], 6, {
+    items: [
+      { kind: "specific", item: { name: "セキネツ鉱" } },
+      { kind: "category", category: { name: "火薬" } },
+      { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
   SynthesisItem.new("中和剤・赤", [{ name: "中和剤" }], 1, {
     items: [
       { kind: "category", category: { name: "花" } },
