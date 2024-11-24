@@ -1,4 +1,4 @@
-import { assert } from "jsr:@std/assert";
+import { assertEquals } from "jsr:@std/assert";
 
 import { detectCircularSynthesisPathsBottomUp } from "./detect.ts";
 import { MaterialItem, SynthesisItem } from "./items.ts";
@@ -85,16 +85,16 @@ Deno.test("循環調合を探す", () => {
   );
 
   // Assert
-  assert(result.length === 1);
-  assert(result[0][0].name === "薬のもと");
-  assert(result[0][1].name === "薬のもと");
+  assertEquals(result.length, 1);
+  assertEquals(result[0][0].name, "薬のもと");
+  assertEquals(result[0][1].name, "薬のもと");
 
-  assert(result2.length === 1);
-  assert(result2[0].length === 4);
-  assert(result2[0][0].name === "中和剤・赤");
-  assert(result2[0][1].name === "ゼッテル");
-  assert(result2[0][2].name === "ラーメル麦粉");
-  assert(result2[0][3].name === "中和剤・赤");
+  assertEquals(result2.length, 1);
+  assertEquals(result2[0].length, 4);
+  assertEquals(result2[0][0].name, "中和剤・赤");
+  assertEquals(result2[0][1].name, "ゼッテル");
+  assertEquals(result2[0][2].name, "ラーメル麦粉");
+  assertEquals(result2[0][3].name, "中和剤・赤");
 });
 
 Deno.test("素材で探してもエラーにならない", () => {
@@ -127,5 +127,5 @@ Deno.test("素材で探してもエラーにならない", () => {
   );
 
   // Assert
-  assert(result.length === 0);
+  assertEquals(result.length, 0);
 });
