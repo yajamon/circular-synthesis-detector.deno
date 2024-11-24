@@ -316,4 +316,12 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "水" } },
     ],
   }),
+  SynthesisItem.new("軟式ゴム石", [{ name: "魔法の道具" }], 7, {
+    items: [
+      { kind: "category", category: { name: "木の実" } },
+      { kind: "category", category: { name: "砂" } },
+      { kind: "category", category: { name: "ぷにぷに" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
 ];
