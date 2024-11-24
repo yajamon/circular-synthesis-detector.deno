@@ -114,6 +114,29 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("グラスビーンズ", [{ name: "薬品" }], 2, {
+    items: [
+      { kind: "category", category: { name: "薬の材料" } },
+      { kind: "category", category: { name: "花" } },
+      { kind: "category", category: { name: "食材" } },
+    ],
+  }),
+  SynthesisItem.new("ドライビスク", [{ name: "食品" }], 4, {
+    items: [
+      { kind: "specific", item: { name: "小麦粉" } },
+      { kind: "specific", item: { name: "クーケンフルーツ" } },
+      { kind: "category", category: { name: "薬の材料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("施しの軟膏", [{ name: "薬品" }], 5, {
+    items: [
+      { kind: "specific", item: { name: "苦い根っこ" } },
+      { kind: "category", category: { name: "薬の材料" } },
+      { kind: "category", category: { name: "花" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
   SynthesisItem.new("中和剤・赤", [{ name: "中和剤" }], 1, {
     items: [
       { kind: "category", category: { name: "花" } },
