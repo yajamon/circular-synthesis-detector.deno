@@ -1,7 +1,7 @@
 import { assertEquals } from "jsr:@std/assert";
 
 import { detectCircularSynthesisPathsBottomUp } from "./detect.ts";
-import { MaterialItem, SynthesisItem } from "./items.ts";
+import type { MaterialItem, SynthesisItem } from "./items.ts";
 
 Deno.test("循環調合を探す", () => {
   // Arrange
