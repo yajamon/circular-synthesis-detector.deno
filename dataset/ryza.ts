@@ -1,8 +1,10 @@
 import { MaterialItem, SynthesisItem } from "../items.ts";
 
 export const materialItems: MaterialItem[] = [
-  MaterialItem.new("陽気な蜜花", [{ name: "花" }, { name: "調味料" }]),
   MaterialItem.new("きれいな水", [{ name: "水" }]),
+  MaterialItem.new("ヤギミルク水", [{ name: "水" }, { name: "食材" }]),
+  MaterialItem.new("ナナシ草", [{ name: "植物" }]),
+  MaterialItem.new("陽気な蜜花", [{ name: "花" }, { name: "調味料" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
