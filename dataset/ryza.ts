@@ -21,6 +21,12 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("苦い根っこ", [{ name: "薬の材料" }, { name: "毒の材料" }]),
   MaterialItem.new("クスリゴケ", [{ name: "薬の材料" }, { name: "植物" }]),
   MaterialItem.new("クミネの実", [{ name: "毒の材料" }, { name: "食材" }]),
+  MaterialItem.new("やわらかい砂", [{ name: "砂" }]),
+  MaterialItem.new("白灰砂", [{ name: "砂" }]),
+  MaterialItem.new("砂石", [{ name: "石材" }]),
+  MaterialItem.new("甘露岩", [{ name: "石材" }, { name: "調味料" }]),
+  MaterialItem.new("風化した石材", [{ name: "石材" }]),
+  MaterialItem.new("古代の石柱", [{ name: "石材" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
