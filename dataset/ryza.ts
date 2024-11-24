@@ -35,6 +35,19 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("小さな晶石", [{ name: "原石" }, { name: "神秘の力" }]),
   MaterialItem.new("正体不明の原石", [{ name: "原石" }]),
   MaterialItem.new("大貝の白玉", [{ name: "原石" }, { name: "魚介類" }]),
+  MaterialItem.new("乾いた木くず", [{ name: "火薬" }]),
+  MaterialItem.new("紙くず", [{ name: "燃料" }]),
+  MaterialItem.new("よく燃える樹皮", [{ name: "燃料" }, { name: "木材" }]),
+  MaterialItem.new("パルマ樹皮", [{ name: "燃料" }, { name: "木材" }]),
+  MaterialItem.new("自然油", [{ name: "燃料" }]),
+  MaterialItem.new("ノライモ", [{ name: "食材" }]),
+  MaterialItem.new("ケモノ肉", [{ name: "食材" }]),
+  MaterialItem.new("新鮮な肉", [{ name: "食材" }]),
+  MaterialItem.new("クーケンフルーツ", [
+    { name: "食材" },
+    { name: "薬の材料" },
+  ]),
+  MaterialItem.new("何かのタマゴ", [{ name: "食材" }, { name: "燃料" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
