@@ -137,6 +137,54 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("草刈り鎌", [{ name: "採取" }], 4, {
+    items: [
+      { kind: "specific", item: { name: "大きな骨" } },
+      { kind: "specific", item: { name: "研磨剤" } },
+      { kind: "category", category: { name: "金属" } },
+      { kind: "category", category: { name: "木材" } },
+    ],
+  }),
+  SynthesisItem.new("薪割り斧", [{ name: "採取" }], 5, {
+    items: [
+      { kind: "specific", item: { name: "アイヒェ" } },
+      { kind: "specific", item: { name: "研磨剤" } },
+      { kind: "category", category: { name: "金属" } },
+      { kind: "category", category: { name: "燃料" } },
+    ],
+  }),
+  SynthesisItem.new("ハンマー", [{ name: "採取" }], 13, {
+    items: [
+      { kind: "specific", item: { name: "白霊岩" } },
+      { kind: "specific", item: { name: "丈夫な丸太" } },
+      { kind: "specific", item: { name: "風化した石材" } },
+      { kind: "category", category: { name: "神秘の力" } },
+    ],
+  }),
+  SynthesisItem.new("フラムロッド", [{ name: "採取" }], 28, {
+    items: [
+      { kind: "specific", item: { name: "聖樹の大枝" } },
+      { kind: "specific", item: { name: "フラム" } },
+      { kind: "category", category: { name: "宝石" } },
+      { kind: "category", category: { name: "火薬" } },
+    ],
+  }),
+  SynthesisItem.new("釣り竿", [{ name: "採取" }], 10, {
+    items: [
+      { kind: "specific", item: { name: "おいしい練り餌" } },
+      { kind: "specific", item: { name: "錬金繊維" } },
+      { kind: "category", category: { name: "木材" } },
+      { kind: "category", category: { name: "虫" } },
+    ],
+  }),
+  SynthesisItem.new("虫取り網", [{ name: "採取" }], 14, {
+    items: [
+      { kind: "specific", item: { name: "香る蜜木" } },
+      { kind: "specific", item: { name: "錬金繊維" } },
+      { kind: "category", category: { name: "木材" } },
+      { kind: "category", category: { name: "気体" } },
+    ],
+  }),
   SynthesisItem.new("中和剤・赤", [{ name: "中和剤" }], 1, {
     items: [
       { kind: "category", category: { name: "花" } },
