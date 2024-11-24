@@ -249,4 +249,49 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
+  SynthesisItem.new("クロース", [{ name: "クロース" }], 2, {
+    items: [
+      { kind: "category", category: { name: "糸素材" } },
+      { kind: "category", category: { name: "動物素材" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("ハチミツ", [{ name: "調味料" }], 3, {
+    items: [
+      { kind: "category", category: { name: "ハチの巣" } },
+      { kind: "category", category: { name: "花" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("エルツ糖", [{ name: "調味料" }], 4, {
+    items: [
+      { kind: "specific", item: { name: "甘露岩" } },
+      { kind: "specific", item: { name: "ハチミツ" } },
+      { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("ミックスオイル", [{ name: "燃料" }], 10, {
+    items: [
+      { kind: "specific", item: { name: "自然油" } },
+      { kind: "specific", item: { name: "パルマの実" } },
+      { kind: "category", category: { name: "木の実" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("小麦粉", [{ name: "食材" }], 4, {
+    items: [
+      { kind: "specific", item: { name: "ヴァッサ麦" } },
+      { kind: "specific", item: { name: "紙くず" } },
+      { kind: "category", category: { name: "燃料" } },
+    ],
+  }),
+  SynthesisItem.new("錬金繊維", [{ name: "糸素材" }], 6, {
+    items: [
+      { kind: "specific", item: { name: "綿毛草" } },
+      { kind: "category", category: { name: "植物" } },
+      { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
 ];
