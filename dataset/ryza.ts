@@ -294,4 +294,26 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("簡易建材", [{ name: "木材" }], 6, {
+    items: [
+      { kind: "specific", item: { name: "アイヒェ" } },
+      { kind: "category", category: { name: "木材" } },
+      { kind: "category", category: { name: "木の実" } },
+    ],
+  }),
+  SynthesisItem.new("簡易石材", [{ name: "石材" }], 6, {
+    items: [
+      { kind: "specific", item: { name: "風化した石材" } },
+      { kind: "category", category: { name: "石材" } },
+      { kind: "category", category: { name: "燃料" } },
+    ],
+  }),
+  SynthesisItem.new("海草土", [{ name: "砂" }], 5, {
+    items: [
+      { kind: "specific", item: { name: "塩草" } },
+      { kind: "specific", item: { name: "やわらかい砂" } },
+      { kind: "category", category: { name: "砂" } },
+      { kind: "category", category: { name: "水" } },
+    ],
+  }),
 ];
