@@ -6,7 +6,7 @@ export interface Item {
   category: SynthesisCategory[];
 }
 
-type ItemName = string;
+export type ItemName = string;
 
 /**
  * 調合カテゴリ
