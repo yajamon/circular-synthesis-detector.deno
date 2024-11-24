@@ -11,6 +11,16 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("病忘れの花", [{ name: "花" }, { name: "薬の材料" }]),
   MaterialItem.new("北風の花", [{ name: "花" }, { name: "毒の材料" }]),
   MaterialItem.new("陽気な蜜花", [{ name: "花" }, { name: "調味料" }]),
+  MaterialItem.new("ランタン草", [
+    { name: "花" },
+    { name: "植物" },
+    { name: "神秘の力" },
+  ]),
+  MaterialItem.new("トーン", [{ name: "薬の材料" }, { name: "植物" }]),
+  MaterialItem.new("セイタカトーン", [{ name: "薬の材料" }, { name: "植物" }]),
+  MaterialItem.new("苦い根っこ", [{ name: "薬の材料" }, { name: "毒の材料" }]),
+  MaterialItem.new("クスリゴケ", [{ name: "薬の材料" }, { name: "植物" }]),
+  MaterialItem.new("クミネの実", [{ name: "毒の材料" }, { name: "食材" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
