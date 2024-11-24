@@ -57,6 +57,12 @@ export const detectCircularSynthesisPathsBottomUp = (
           reverseRecipeMap.set(key, new Set());
         }
         reverseRecipeMap.get(key)!.add(item.name);
+      } else if (el.kind === "specific") {
+        const key: ReverceRecipeMapKey = `specific-${el.item.name}`;
+        if (!reverseRecipeMap.has(key)) {
+          reverseRecipeMap.set(key, new Set());
+        }
+        reverseRecipeMap.get(key)!.add(item.name);
       }
     }
   }
@@ -80,6 +86,38 @@ export const detectCircularSynthesisPathsBottomUp = (
     const [current, path] = queue.shift()!;
 
     // currentを素材にする調合を探す
+
+    // アイテム指定から
+    {
+      const key: ReverceRecipeMapKey = `specific-${current.name}`;
+      const nameSet = reverseRecipeMap.get(key);
+      if (nameSet) {
+        // アイテム指定の調合がある
+        for (const nextItemName of nameSet) {
+          // 目的の循環調合を発見した
+          if (nextItemName === targetItemName) {
+            const next = synthesisItemMap.get(nextItemName)!;
+            const res = [...path, next];
+            // console.log("目的の循環調合を発見した", res.map((p) => p.name));
+            return [res];
+          }
+
+          if (visited.has(nextItemName)) {
+            // 探索済み
+            continue;
+          }
+          const next = synthesisItemMap.get(nextItemName);
+          if (!next) {
+            // 素材になる調合がない
+            continue;
+          }
+          queue.push([next, [...path, next]]);
+          visited.add(next.name);
+        }
+      }
+    }
+
+    // カテゴリ指定から
     for (const cat of current.category) {
       const key: ReverceRecipeMapKey = `category-${cat.name}`;
       if (!reverseRecipeMap.has(key)) {
