@@ -41,6 +41,14 @@ export const detectCircularSynthesisPathsBottomUp = (
   }
 
   // 探索する
+  const queue: SynthesisItem[] = []; // できれば配列じゃないほうが良いのでは…
+  const visited = new Set<ItemName>();
+  const entrypint = synthesisItemMap.get(targetItemName);
+  if (!entrypint) {
+    return [];
+  }
 
-  return [];
+  return [
+    [entrypint],
+  ];
 };
