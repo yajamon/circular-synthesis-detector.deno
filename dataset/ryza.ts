@@ -68,6 +68,19 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("シュラブ", [{ name: "魚介類" }]),
   MaterialItem.new("ナナホシ", [{ name: "虫" }]),
   MaterialItem.new("ハニーアント", [{ name: "虫" }, { name: "調味料" }]),
+  MaterialItem.new("束縛する鋼糸", [{ name: "糸素材" }]),
+  MaterialItem.new("丈夫なつる", [{ name: "糸素材" }, { name: "植物" }]),
+  MaterialItem.new("綿毛草", [{ name: "糸素材" }, { name: "植物" }]),
+  MaterialItem.new("アイヒェ", [{ name: "木材" }]),
+  MaterialItem.new("丈夫な丸太", [{ name: "木材" }]),
+  MaterialItem.new("ウィングプラント", [{ name: "植物" }, { name: "気体" }]),
+  MaterialItem.new("ぷにぷに玉・青", [{ name: "ぷにぷに" }]),
+  MaterialItem.new("ぷにぷに玉・緑", [{ name: "ぷにぷに" }]),
+  MaterialItem.new("大きな羽根", [{ name: "動物素材" }]),
+  MaterialItem.new("動物の毛皮", [{ name: "動物素材" }]),
+  MaterialItem.new("大きな骨", [{ name: "動物素材" }]),
+  MaterialItem.new("ヘビの脱け殻", [{ name: "動物素材" }]),
+  MaterialItem.new("魔石の欠片", [{ name: "神秘の力" }]),
 ];
 
 export const synthesisItems: SynthesisItem[] = [
