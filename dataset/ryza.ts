@@ -112,6 +112,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "燃料" } },
     ],
   }),
+  SynthesisItem.new("氷びし", [{ name: "爆弾" }], 4, {
+    items: [
+      { kind: "category", category: { name: "水" } },
+      { kind: "category", category: { name: "魚介類" } },
+      { kind: "category", category: { name: "鉱石" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
   SynthesisItem.new("クラフト", [{ name: "爆弾" }], 4, {
     items: [
       { kind: "category", category: { name: "うに" } },
@@ -149,6 +157,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "薬の材料" } },
       { kind: "category", category: { name: "花" } },
       { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("魚油リキッド", [{ name: "薬品" }], 7, {
+    items: [
+      { kind: "specific", item: { name: "サルディン" } },
+      { kind: "specific", item: { name: "塩草" } },
+      { kind: "category", category: { name: "魚介類" } },
+      { kind: "category", category: { name: "燃料" } },
     ],
   }),
   SynthesisItem.new("草刈り鎌", [{ name: "採取" }], 4, {
@@ -238,6 +254,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("おいしい練り餌", [{ name: "雑貨" }, { name: "食材" }], 7, {
+    items: [
+      { kind: "specific", item: { name: "小麦粉" } },
+      { kind: "specific", item: { name: "クミネの実" } },
+      { kind: "category", category: { name: "虫" } },
+      { kind: "category", category: { name: "調味料" } },
+    ],
+  }),
   SynthesisItem.new(
     "インゴット",
     [{ name: "インゴット" }, { name: "金属" }],
@@ -270,6 +294,27 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new(
+    "ネイチャークロス",
+    [{ name: "クロース" }, { name: "植物" }],
+    9,
+    {
+      items: [
+        { kind: "specific", item: { name: "錬金繊維" } },
+        { kind: "specific", item: { name: "植物エキス" } },
+        { kind: "category", category: { name: "植物" } },
+        { kind: "category", category: { name: "動物素材" } },
+      ],
+    },
+  ),
+  SynthesisItem.new("パールクリスタル", [{ name: "宝石" }], 13, {
+    items: [
+      { kind: "specific", item: { name: "大貝の白玉" } },
+      { kind: "specific", item: { name: "白灰砂" } },
+      { kind: "category", category: { name: "原石" } },
+      { kind: "category", category: { name: "ぷにぷに" } },
+    ],
+  }),
   SynthesisItem.new("ハチミツ", [{ name: "調味料" }], 3, {
     items: [
       { kind: "category", category: { name: "ハチの巣" } },
@@ -285,6 +330,19 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new(
+    "ヒーリングチップ",
+    [{ name: "薬の材料" }, { name: "気体" }],
+    12,
+    {
+      items: [
+        { kind: "specific", item: { name: "ミックスオイル" } },
+        { kind: "specific", item: { name: "乾いた木くず" } },
+        { kind: "category", category: { name: "燃料" } },
+        { kind: "category", category: { name: "きのこ" } },
+      ],
+    },
+  ),
   SynthesisItem.new("ミックスオイル", [{ name: "燃料" }], 10, {
     items: [
       { kind: "specific", item: { name: "自然油" } },
