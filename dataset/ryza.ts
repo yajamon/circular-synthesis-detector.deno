@@ -14,6 +14,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("病忘れの花", [{ name: "花" }, { name: "薬の材料" }]),
   MaterialItem.new("北風の花", [{ name: "花" }, { name: "毒の材料" }]),
   MaterialItem.new("陽気な蜜花", [{ name: "花" }, { name: "調味料" }]),
+  MaterialItem.new("追憶の霧花", [{ name: "花" }, { name: "燃料" }]),
   MaterialItem.new("静寂の月花", [{ name: "花" }, { name: "薬の材料" }]),
   MaterialItem.new("ランタン草", [
     { name: "花" },
@@ -133,6 +134,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "specific", item: { name: "セキネツ鉱" } },
       { kind: "category", category: { name: "火薬" } },
       { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("レヘルン", [{ name: "爆弾" }], 8, {
+    items: [
+      { kind: "specific", item: { name: "アクア鉱" } },
+      { kind: "category", category: { name: "水" } },
+      { kind: "category", category: { name: "魚介類" } },
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
