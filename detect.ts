@@ -1,9 +1,19 @@
 import type {
+  Item,
   ItemName,
   MaterialItem,
   SynthesisCategory,
   SynthesisItem,
 } from "./items.ts";
+
+export const detectSynthesisPathsBottumUp = (
+  materialItems: MaterialItem[],
+  synthesisItems: SynthesisItem[],
+  beginItemName: ItemName,
+  targetItemName: ItemName,
+): Item[][] => {
+  return [];
+};
 
 export const detectCircularSynthesisPathsBottomUp = (
   materiarItems: MaterialItem[],
