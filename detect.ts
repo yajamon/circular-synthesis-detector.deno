@@ -19,13 +19,6 @@ export const detectCircularSynthesisPathsBottomUp = (
   const categoriesMap = new Map<SynthesisCategory, Set<CategoryMapElement>>();
 
   // 素材を要求するアイテムを逆引きできるようにする
-  type _ReverceRecipeMapKey = {
-    kind: "specific";
-    name: ItemName;
-  } | {
-    kind: "category";
-    name: SynthesisCategory;
-  };
   type ReverceRecipeMapKey = `specific-${string}` | `category-${string}`;
   const reverseRecipeMap = new Map<ReverceRecipeMapKey, Set<ItemName>>();
 
