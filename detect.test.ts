@@ -1,7 +1,48 @@
 import { assertEquals } from "jsr:@std/assert";
 
-import { detectCircularSynthesisPathsBottomUp } from "./detect.ts";
+import {
+  detectCircularSynthesisPathsBottomUp,
+  detectSynthesisPathsBottumUp,
+} from "./detect.ts";
 import type { MaterialItem, SynthesisItem } from "./items.ts";
+
+Deno.test("調合経路を探す", () => {
+  // Arrange
+  const materialItems: MaterialItem[] = [
+    {
+      name: "ラーメル麦",
+      category: [{ name: "食材" }, { name: "植物類" }],
+    },
+  ];
+  const synthesisItems: SynthesisItem[] = [
+    {
+      name: "ラーメル麦粉",
+      category: [{ name: "食材" }, { name: "火薬" }],
+      synthesisLevel: 3,
+      recipe: {
+        items: [
+          { kind: "specific", item: { name: "ラーメル麦" } },
+          { kind: "category", category: { name: "紙" } },
+          { kind: "category", category: { name: "鉱石" } },
+        ],
+      },
+    },
+  ];
+
+  // Act
+  const result = detectSynthesisPathsBottumUp(
+    materialItems,
+    synthesisItems,
+    "ラーメル麦",
+    "ラーメル麦粉",
+  );
+
+  // Assert
+  assertEquals(result.length, 1);
+  assertEquals(result[0].length, 2);
+  assertEquals(result[0][0].name, "ラーメル麦");
+  assertEquals(result[0][1].name, "ラーメル麦粉");
+});
 
 Deno.test("循環調合を探す", () => {
   // Arrange

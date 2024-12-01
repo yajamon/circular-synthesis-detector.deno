@@ -1,15 +1,17 @@
 import type {
+  Item,
   ItemName,
   MaterialItem,
   SynthesisCategory,
   SynthesisItem,
 } from "./items.ts";
 
-export const detectCircularSynthesisPathsBottomUp = (
-  materiarItems: MaterialItem[],
+export const detectSynthesisPathsBottumUp = (
+  materialItems: MaterialItem[],
   synthesisItems: SynthesisItem[],
+  beginItemName: ItemName,
   targetItemName: ItemName,
-): SynthesisItem[][] => {
+): Item[][] => {
   const materialItemMap = new Map<ItemName, MaterialItem>();
   const synthesisItemMap = new Map<ItemName, SynthesisItem>();
   type CategoryMapElement = {
@@ -19,18 +21,11 @@ export const detectCircularSynthesisPathsBottomUp = (
   const categoriesMap = new Map<SynthesisCategory, Set<CategoryMapElement>>();
 
   // 素材を要求するアイテムを逆引きできるようにする
-  type _ReverceRecipeMapKey = {
-    kind: "specific";
-    name: ItemName;
-  } | {
-    kind: "category";
-    name: SynthesisCategory;
-  };
   type ReverceRecipeMapKey = `specific-${string}` | `category-${string}`;
   const reverseRecipeMap = new Map<ReverceRecipeMapKey, Set<ItemName>>();
 
   // 探索のためにマップに変換
-  for (const item of materiarItems) {
+  for (const item of materialItems) {
     materialItemMap.set(item.name, item);
     for (const category of item.category) {
       // カテゴリから逆引きできるようにする
@@ -67,20 +62,24 @@ export const detectCircularSynthesisPathsBottomUp = (
     }
   }
 
-  // console.log(materialItemMap);
-  // console.log(synthesisItemMap);
-  // console.log(categoriesMap);
-  // console.log(reverseRecipeMap);
-
   // 探索する
-  type Path = SynthesisItem[];
-  const queue: [SynthesisItem, Path][] = []; // できれば配列じゃないほうが良いのでは…
+  type Path = Item[];
+  const queue: [Item, Path][] = []; // できれば配列じゃないほうが良いのでは…
   const visited = new Set<ItemName>();
-  const entrypint = synthesisItemMap.get(targetItemName);
+  const entrypint = (() => {
+    if (materialItemMap.has(beginItemName)) {
+      return materialItemMap.get(beginItemName);
+    }
+    if (synthesisItemMap.has(beginItemName)) {
+      return synthesisItemMap.get(beginItemName);
+    }
+    return null;
+  })();
   if (!entrypint) {
     return [];
   }
-  const result: SynthesisItem[][] = [];
+
+  const result: Item[][] = [];
 
   queue.push([entrypint, [entrypint]]);
   visited.add(entrypint.name);
@@ -96,7 +95,7 @@ export const detectCircularSynthesisPathsBottomUp = (
       if (nameSet) {
         // アイテム指定の調合がある
         for (const nextItemName of nameSet) {
-          // 目的の循環調合を発見した
+          // 目的の調合を発見した
           if (nextItemName === targetItemName) {
             const next = synthesisItemMap.get(nextItemName)!;
             const res = [...path, next];
@@ -128,7 +127,7 @@ export const detectCircularSynthesisPathsBottomUp = (
         continue;
       }
       for (const nextItemName of reverseRecipeMap.get(key)!) {
-        // 目的の循環調合を発見した
+        // 目的の調合を発見した
         if (nextItemName === targetItemName) {
           const next = synthesisItemMap.get(nextItemName)!;
           const res = [...path, next];
@@ -152,4 +151,24 @@ export const detectCircularSynthesisPathsBottomUp = (
   }
 
   return result;
+};
+
+export const detectCircularSynthesisPathsBottomUp = (
+  materiarItems: MaterialItem[],
+  synthesisItems: SynthesisItem[],
+  targetItemName: ItemName,
+): SynthesisItem[][] => {
+  // 循環調合は素材アイテムから発生しない。ここで切り落とすことでItemからSynthesisItemにキャストが許される。
+  for (const item of materiarItems) {
+    if (item.name === targetItemName) {
+      return [];
+    }
+  }
+
+  return detectSynthesisPathsBottumUp(
+    materiarItems,
+    synthesisItems,
+    targetItemName,
+    targetItemName,
+  ) as SynthesisItem[][];
 };
