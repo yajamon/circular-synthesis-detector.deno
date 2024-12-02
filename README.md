@@ -4,7 +4,7 @@
 
 このリポジトリに含まれるデータセットはゲーム配信の進捗等に基づいて更新されます。
 
-- [ライザのアトリエ](https://www.youtube.com/playlist?list=PLjlQnMeB78uxp5LGJVEt1cJZKNUbMIFsZ)
+- [ライザのアトリエ配信](https://www.youtube.com/playlist?list=PLjlQnMeB78uxItZT6V2ibZ76CRP_sduuA)
 
 ## 循環調合の考え方
 
