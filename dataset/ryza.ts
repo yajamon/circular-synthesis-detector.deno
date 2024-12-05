@@ -499,6 +499,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("ぷにレザー", [{ name: "動物素材" }], 23, {
+    items: [
+      { kind: "specific", item: { name: "大ぷに玉" } },
+      { kind: "specific", item: { name: "ネイチャークロス" } },
+      { kind: "category", category: { name: "ぷにぷに" } },
+      { kind: "category", category: { name: "きのこ" } },
+    ],
+  }),
   SynthesisItem.new("簡易建材", [{ name: "木材" }], 6, {
     items: [
       { kind: "specific", item: { name: "アイヒェ" } },
