@@ -31,6 +31,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("祝福の清花", [{ name: "花" }, { name: "神秘の力" }]),
   MaterialItem.new("追憶の霧花", [{ name: "花" }, { name: "燃料" }]),
   MaterialItem.new("静寂の月花", [{ name: "花" }, { name: "薬の材料" }]),
+  MaterialItem.new("夜光花", [{ name: "花" }, { name: "薬の材料" }]),
   MaterialItem.new("ランタン草", [
     { name: "花" },
     { name: "植物" },
@@ -42,6 +43,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("変異トーン", [{ name: "薬の材料" }, { name: "植物" }]),
   MaterialItem.new("紅草", [{ name: "薬の材料" }, { name: "エリキシル" }]),
   MaterialItem.new("苦い根っこ", [{ name: "薬の材料" }, { name: "毒の材料" }]),
+  MaterialItem.new("若木の枝葉", [{ name: "薬の材料" }, { name: "神秘の力" }]),
   MaterialItem.new("クスリゴケ", [{ name: "薬の材料" }, { name: "植物" }]),
   MaterialItem.new("肥沃な土壌", [{ name: "薬の材料" }, { name: "燃料" }]),
   MaterialItem.new("クミネの実", [{ name: "毒の材料" }, { name: "食材" }]),
@@ -60,6 +62,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("甘露岩", [{ name: "石材" }, { name: "調味料" }]),
   MaterialItem.new("風化した石材", [{ name: "石材" }]),
   MaterialItem.new("古代の石柱", [{ name: "石材" }]),
+  MaterialItem.new("リバーストン", [{ name: "石材" }, { name: "原石" }]),
   MaterialItem.new("水辺の苔石", [{ name: "石材" }, { name: "砂" }]),
   MaterialItem.new("鍾乳石の欠片", [{ name: "石材" }]),
   MaterialItem.new("白霊岩", [{ name: "石材" }]),
@@ -76,6 +79,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("大貝の白玉", [{ name: "原石" }, { name: "魚介類" }]),
   MaterialItem.new("琥珀の欠片", [{ name: "原石" }, { name: "砂" }]),
   MaterialItem.new("琥珀水晶", [{ name: "原石" }, { name: "鉱石" }]),
+  MaterialItem.new("マグネマルモア", [{ name: "原石" }]),
   MaterialItem.new("乾いた木くず", [{ name: "火薬" }]),
   MaterialItem.new("紙くず", [{ name: "燃料" }]),
   MaterialItem.new("よく燃える樹皮", [{ name: "燃料" }, { name: "木材" }]),
@@ -97,6 +101,11 @@ export const materialItems: MaterialItem[] = [
     { name: "食材" },
     { name: "燃料" },
   ]),
+  MaterialItem.new("甘露の実", [
+    { name: "木の実" },
+    { name: "食材" },
+    { name: "調味料" },
+  ]),
   MaterialItem.new("ハチの巣", [{ name: "ハチの巣" }, { name: "火薬" }]),
   MaterialItem.new("銀のハチの巣", [{ name: "ハチの巣" }, { name: "火薬" }]),
   MaterialItem.new("アイヒェロア", [{ name: "きのこ" }]),
@@ -106,9 +115,11 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("サルディン", [{ name: "魚介類" }]),
   MaterialItem.new("エグゾフィッシュ", [{ name: "魚介類" }, { name: "気体" }]),
   MaterialItem.new("トゲトゲ", [{ name: "魚介類" }]),
+  MaterialItem.new("セリヨル", [{ name: "魚介類" }]),
   MaterialItem.new("プルムル", [{ name: "魚介類" }, { name: "鉱石" }]),
   MaterialItem.new("シュラブ", [{ name: "魚介類" }]),
   MaterialItem.new("シゾール", [{ name: "魚介類" }]),
+  MaterialItem.new("ソーンフィッシュ", [{ name: "魚介類" }]),
   MaterialItem.new("ナナホシ", [{ name: "虫" }]),
   MaterialItem.new("ハニーアント", [{ name: "虫" }, { name: "調味料" }]),
   MaterialItem.new("ローズビー", [{ name: "虫" }, { name: "毒の材料" }]),
@@ -132,6 +143,8 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("ヘビの脱け殻", [{ name: "動物素材" }]),
   MaterialItem.new("巨獣の化石", [{ name: "動物素材" }]),
   MaterialItem.new("魔石の欠片", [{ name: "神秘の力" }]),
+  MaterialItem.new("魔導書の切れ端", [{ name: "神秘の力" }, { name: "燃料" }]),
+  MaterialItem.new("古びた魔導書", [{ name: "神秘の力" }, { name: "燃料" }]),
   MaterialItem.new("メイブル樹皮", [{ name: "調味料" }, { name: "燃料" }]),
   MaterialItem.new("蜜木の枝", [{ name: "調味料" }, { name: "木材" }]),
   MaterialItem.new("スピリットフラワー", [
@@ -144,6 +157,7 @@ export const materialItems: MaterialItem[] = [
   ]),
   MaterialItem.new("サビついた剣", [{ name: "金属" }]),
   MaterialItem.new("古き騎士の紋章", [{ name: "金属" }, { name: "神秘の力" }]),
+  MaterialItem.new("土魚の暴牙", [{ name: "動物素材" }, { name: "毒の材料" }]),
   MaterialItem.new("竜肉", [{ name: "竜素材" }, { name: "食材" }]),
   MaterialItem.new("翼竜の翼", [{ name: "竜素材" }, { name: "気体" }]),
   MaterialItem.new("翼竜のタマゴ", [{ name: "竜素材" }, { name: "燃料" }]),
@@ -336,6 +350,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "木材" } },
     ],
   }),
+  SynthesisItem.new("釣り竿網", [{ name: "採取" }], 22, {
+    items: [
+      { kind: "specific", item: { name: "虫取り網" } },
+      { kind: "specific", item: { name: "釣り竿" } },
+      { kind: "category", category: { name: "きのこ" } },
+      { kind: "category", category: { name: "食材" } },
+    ],
+  }),
   SynthesisItem.new("中和剤・赤", [{ name: "中和剤" }], 1, {
     items: [
       { kind: "category", category: { name: "花" } },
@@ -491,6 +513,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("旅人の水珠", [{ name: "水" }, { name: "神秘の力" }], 22, {
+    items: [
+      { kind: "specific", item: { name: "泡立つ水" } },
+      { kind: "specific", item: { name: "ゼッテル" } },
+      { kind: "category", category: { name: "木の実" } },
+      { kind: "category", category: { name: "魚介類" } },
+    ],
+  }),
   SynthesisItem.new(
     "ヒーリングチップ",
     [{ name: "薬の材料" }, { name: "気体" }],
@@ -540,6 +570,22 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("混鉄鋼板", [{ name: "木材" }, { name: "金属" }], 17, {
+    items: [
+      { kind: "specific", item: { name: "インゴット" } },
+      { kind: "specific", item: { name: "簡易建材" } },
+      { kind: "category", category: { name: "ぷにぷに" } },
+      { kind: "category", category: { name: "燃料" } },
+    ],
+  }),
+  SynthesisItem.new("ミストリキッド", [{ name: "気体" }], 29, {
+    items: [
+      { kind: "specific", item: { name: "古びた魔導書" } },
+      { kind: "specific", item: { name: "旅人の水珠" } },
+      { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "きのこ" } },
+    ],
+  }),
   SynthesisItem.new("ぷにレザー", [{ name: "動物素材" }], 23, {
     items: [
       { kind: "specific", item: { name: "大ぷに玉" } },
@@ -554,6 +600,22 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "調味料" } },
       { kind: "category", category: { name: "うに" } },
       { kind: "category", category: { name: "植物" } },
+    ],
+  }),
+  SynthesisItem.new("石の種", [{ name: "種" }], 16, {
+    items: [
+      { kind: "specific", item: { name: "鍾乳石の欠片" } },
+      { kind: "category", category: { name: "調味料" } },
+      { kind: "category", category: { name: "うに" } },
+      { kind: "category", category: { name: "石材" } },
+    ],
+  }),
+  SynthesisItem.new("水の種", [{ name: "種" }], 16, {
+    items: [
+      { kind: "specific", item: { name: "植物エキス" } },
+      { kind: "category", category: { name: "調味料" } },
+      { kind: "category", category: { name: "うに" } },
+      { kind: "category", category: { name: "魚介類" } },
     ],
   }),
   SynthesisItem.new("簡易建材", [{ name: "木材" }], 6, {
@@ -586,4 +648,17 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new(
+    "強力な魚のエサ",
+    [{ name: "雑貨" }, { name: "食材" }],
+    12,
+    {
+      items: [
+        { kind: "specific", item: { name: "クミネの実" } },
+        { kind: "specific", item: { name: "七色葡萄" } },
+        { kind: "category", category: { name: "魚介類" } },
+        { kind: "category", category: { name: "きのこ" } },
+      ],
+    },
+  ),
 ];
