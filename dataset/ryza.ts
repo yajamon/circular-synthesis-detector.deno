@@ -2,7 +2,7 @@ import { MaterialItem, SynthesisItem } from "../items.ts";
 
 export const materialItems: MaterialItem[] = [
   MaterialItem.new("きれいな水", [{ name: "水" }]),
-  MaterialItem.new("ヤギミルク水", [{ name: "水" }, { name: "食材" }]),
+  MaterialItem.new("ヤギミルク", [{ name: "水" }, { name: "食材" }]),
   MaterialItem.new("植物エキス", [{ name: "水" }, { name: "薬の材料" }]),
   MaterialItem.new("ロテスヴァッサ鉱水", [
     { name: "水" },
