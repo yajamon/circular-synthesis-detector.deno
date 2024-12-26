@@ -1,4 +1,5 @@
 import { MaterialItem, SynthesisItem } from "../items.ts";
+import type { SynthesisCategory } from "../items.ts";
 
 export const materialItems: MaterialItem[] = [
   MaterialItem.new("きれいな水", [{ name: "水" }]),
@@ -891,4 +892,114 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "神秘の力" } },
     ],
   }),
+];
+
+interface AppendCategoryEffectItem {
+  category: SynthesisCategory;
+  items: string[];
+}
+
+// コメントで重複した内容を書いているのは、Copilotにボイラープレートを生成してもらうため
+
+export const appendCategoryEffectItems: AppendCategoryEffectItem[] = [
+  // 花 中和剤・青
+  {
+    category: { name: "花" },
+    items: ["中和剤・青"],
+  },
+  // 薬の材料 パールクリスタル 超純水 強力な魚のエサ
+  {
+    category: { name: "薬の材料" },
+    items: ["パールクリスタル", "超純水", "強力な魚のエサ"],
+  },
+  {
+    category: { name: "毒の材料" },
+    items: ["ヒーリングチップ"],
+  },
+  {
+    category: { name: "エリキシル" },
+    items: ["精霊の小瓶"],
+  },
+  {
+    category: { name: "砂" },
+    items: ["エルツ糖"],
+  },
+  {
+    category: { name: "石材" },
+    items: ["ハンマー", "中和剤・緑", "アンバーライト", "軟式ゴム石"],
+  },
+  {
+    category: { name: "鉱石" },
+    items: ["草刈り鎌", "中和剤・黄"],
+  },
+  {
+    category: { name: "火薬" },
+    items: ["中和剤・赤", "小麦粉"],
+  },
+  {
+    category: { name: "燃料" },
+    items: ["虫取り網", "中和剤・赤", "ハチミツ"],
+  },
+  {
+    category: { name: "食材" },
+    items: ["パールクリスタル"],
+  },
+  {
+    category: { name: "木の実" },
+    items: ["おいしい練り餌"],
+  },
+  {
+    category: { name: "きのこ" },
+    items: ["誘魔香"],
+  },
+  // 魚介類
+  {
+    category: { name: "魚介類" },
+    items: ["おいしい練り餌"],
+  },
+  // 虫 釣り竿 アンバーライト
+  {
+    category: { name: "虫" },
+    items: ["釣り竿", "アンバーライト"],
+  },
+  // 糸素材 釣り竿 虫取り網 釣り竿網 中和剤・黄
+  {
+    category: { name: "糸素材" },
+    items: ["釣り竿", "虫取り網", "釣り竿網", "中和剤・黄"],
+  },
+  // 木材 薪割り斧 ハンマー 中和剤・緑 ヒーリングチップ
+  {
+    category: { name: "木材" },
+    items: ["薪割り斧", "ハンマー", "中和剤・緑", "ヒーリングチップ"],
+  },
+  // 気体 薪割り 中和剤・青 ミックスオイル
+  {
+    category: { name: "気体" },
+    items: ["薪割り", "中和剤・青", "ミックスオイル"],
+  },
+  // 神秘の力 アルケミーペイント 補助義手
+  {
+    category: { name: "神秘の力" },
+    items: ["アルケミーペイント", "補助義手"],
+  },
+  // 中和剤 ゼラチンパウダー
+  {
+    category: { name: "中和剤" },
+    items: ["ゼラチンパウダー"],
+  },
+  // 雑貨 草刈り鎌 錬金繊維 ミストリキッド
+  {
+    category: { name: "雑貨" },
+    items: ["草刈り鎌", "錬金繊維", "ミストリキッド"],
+  },
+  // 金属 コンパス 鎌斧
+  {
+    category: { name: "金属" },
+    items: ["コンパス", "鎌斧"],
+  },
+  // 宝石 精霊の小瓶
+  {
+    category: { name: "宝石" },
+    items: ["精霊の小瓶"],
+  },
 ];
