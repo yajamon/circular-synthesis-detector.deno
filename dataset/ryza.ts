@@ -889,8 +889,8 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "調味料" } },
       { kind: "category", category: { name: "うに" } },
       { kind: "category", category: { name: "火薬" } },
-    }
-  ),
+    ],
+  }),
   SynthesisItem.new("水の種", [{ name: "種" }], 16, {
     items: [
       { kind: "specific", item: { name: "植物エキス" } },
