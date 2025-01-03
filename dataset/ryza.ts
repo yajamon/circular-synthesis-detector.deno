@@ -1259,7 +1259,7 @@ interface AppendCategoryEffect {
 
 // コメントで重複した内容を書いているのは、Copilotにボイラープレートを生成してもらうため
 
-export const appendCategoryEffectItems: AppendCategoryEffect[] = [
+export const appendCategoryEffects: AppendCategoryEffect[] = [
   // 水 聖なる雫
   {
     category: { name: "水" },

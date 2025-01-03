@@ -1,7 +1,7 @@
 import { detectCircularSynthesisPathsBottomUp } from "../detect.ts";
 
 import {
-  appendCategoryEffectItems,
+  appendCategoryEffects,
   materialItems,
   synthesisItems,
 } from "../dataset/ryza.ts";
@@ -9,7 +9,7 @@ import type { SynthesisCategory } from "../items.ts";
 
 // カテゴリ追加をアイテムごとにまとめる
 const effects = new Map<string, SynthesisCategory[]>();
-for (const ef of appendCategoryEffectItems) {
+for (const ef of appendCategoryEffects) {
   const { category, items } = ef;
   for (const item of items) {
     if (!effects.has(item)) {
