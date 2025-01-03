@@ -398,7 +398,7 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
-  SynthesisItem.new.("ルナーランプ", [{ name: "魔法の道具" }], 44, {
+  SynthesisItem.new("ルナーランプ", [{ name: "魔法の道具" }], 44, {
     items: [
       { kind: "specific", item: { name: "セイントダイヤ" } },
       { kind: "specific", item: { name: "聖なる雫" } },
