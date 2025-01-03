@@ -988,14 +988,19 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "燃料" } },
     ],
   }),
-  SynthesisItem.new("ホーリーナット", [{ name: "木の実" }], 32, {
-    items: [
-      { kind: "specific", item: { name: "聖樹の大枝" } },
-      { kind: "specific", item: { name: "混鉄鋼板" } },
-      { kind: "category", category: { name: "エリキシル" } },
-      { kind: "category", category: { name: "神秘の力" } },
-    ],
-  }),
+  SynthesisItem.new(
+    "ホーリーナット",
+    [{ name: "木材" }, { name: "神秘の力" }],
+    32,
+    {
+      items: [
+        { kind: "specific", item: { name: "聖樹の大枝" } },
+        { kind: "specific", item: { name: "混鉄鋼板" } },
+        { kind: "category", category: { name: "エリキシル" } },
+        { kind: "category", category: { name: "神秘の力" } },
+      ],
+    },
+  ),
   SynthesisItem.new("ミストリキッド", [{ name: "気体" }], 29, {
     items: [
       { kind: "specific", item: { name: "古びた魔導書" } },
