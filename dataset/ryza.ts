@@ -1104,14 +1104,19 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
-  SynthesisItem.new("ガラスの花", [{ name: "神秘の力" }, { name: "宝石", }], 34, {
-    items: [
-      { kind: "specific", item: { name: "ロテスヴァッサ鉱水" } },
-      { kind: "specific", item: { name: "デルフィローズ香" } },
-      { kind: "category", category: { name: "花" } },
-      { kind: "category", category: { name: "植物" } },
-    ],
-  }),
+  SynthesisItem.new(
+    "ガラスの花",
+    [{ name: "神秘の力" }, { name: "宝石" }],
+    34,
+    {
+      items: [
+        { kind: "specific", item: { name: "ロテスヴァッサ鉱水" } },
+        { kind: "specific", item: { name: "デルフィローズ香" } },
+        { kind: "category", category: { name: "花" } },
+        { kind: "category", category: { name: "植物" } },
+      ],
+    },
+  ),
   SynthesisItem.new(
     "精霊の小瓶",
     [{ name: "神秘の力" }, { name: "雑貨" }],
@@ -1125,14 +1130,19 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
-  SynthesisItem.new("クリスタルエレメント", [{ name: "神秘の力" }, { name: "火薬" } , {name: "水"}, {name: "砂"}], 46, {
-    items: [
-      { kind: "specific", item: { name: "セプトリエン" } },
-      { kind: "specific", item: { name: "ゴーレムのコア" } },
-      { kind: "category", category: { name: "原石" } },
-      { kind: "category", category: { name: "中和剤" } },
-    ],
-  }),
+  SynthesisItem.new(
+    "クリスタルエレメント",
+    [{ name: "神秘の力" }, { name: "火薬" }, { name: "水" }, { name: "砂" }],
+    46,
+    {
+      items: [
+        { kind: "specific", item: { name: "セプトリエン" } },
+        { kind: "specific", item: { name: "ゴーレムのコア" } },
+        { kind: "category", category: { name: "原石" } },
+        { kind: "category", category: { name: "中和剤" } },
+      ],
+    },
+  ),
   SynthesisItem.new("植物の種", [{ name: "種" }], 14, {
     items: [
       { kind: "specific", item: { name: "若木の枝葉" } },
