@@ -66,6 +66,7 @@ export const materialItems: MaterialItem[] = [
     { name: "薬の材料" },
     { name: "エリキシル" },
   ]),
+  //TODO: ここに未確認アイテムあり
   MaterialItem.new("デルフィローズ", [{ name: "花" }, { name: "糸素材" }]),
   MaterialItem.new("トーン", [{ name: "薬の材料" }, { name: "植物" }]),
   MaterialItem.new("セイタカトーン", [{ name: "薬の材料" }, { name: "植物" }]),
@@ -146,6 +147,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("パルマ樹皮", [{ name: "燃料" }, { name: "木材" }]),
   MaterialItem.new("自然油", [{ name: "燃料" }]),
   MaterialItem.new("白煙炭", [{ name: "燃料" }]),
+  //TODO: ここに未確認アイテムあり
   MaterialItem.new("ノライモ", [{ name: "食材" }]),
   MaterialItem.new("ケモノ肉", [{ name: "食材" }]),
   MaterialItem.new("新鮮な肉", [{ name: "食材" }]),
@@ -422,6 +424,7 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  //TODO: ここに未確認アイテムあり
   SynthesisItem.new("ルナーランプ", [{ name: "魔法の道具" }], 44, {
     items: [
       { kind: "specific", item: { name: "セイントダイヤ" } },
@@ -438,6 +441,7 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "燃料" } },
     ],
   }),
+  //TODO: ここに未確認アイテムあり
   SynthesisItem.new("グラスビーンズ", [{ name: "薬品" }], 2, {
     items: [
       { kind: "category", category: { name: "薬の材料" } },
@@ -525,6 +529,7 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "木の実" } },
     ],
   }),
+  //TODO: ここに未確認アイテムあり
   SynthesisItem.new("エリキシル剤", [{ name: "薬品" }], 45, {
     items: [
       { kind: "specific", item: { name: "ドンケルハイト" } },
@@ -857,6 +862,7 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
+  //TODO: ここに未確認アイテムあり
   SynthesisItem.new("クロース", [{ name: "クロース" }], 2, {
     items: [
       { kind: "category", category: { name: "糸素材" } },
@@ -903,6 +909,7 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
+  //TODO: ここに未確認アイテムあり
   SynthesisItem.new("パールクリスタル", [{ name: "宝石" }], 13, {
     items: [
       { kind: "specific", item: { name: "大貝の白玉" } },
@@ -1207,6 +1214,7 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
+  //TODO: ここに未確認アイテムあり
   SynthesisItem.new("植物の種", [{ name: "種" }], 14, {
     items: [
       { kind: "specific", item: { name: "若木の枝葉" } },
@@ -1314,6 +1322,7 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "燃料" } },
     ],
   }),
+  //TODO: ここに未確認アイテムあり
 ];
 
 interface AppendCategoryEffect {
