@@ -192,6 +192,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("メイスフィッシュ", [{ name: "魚介類" }]),
   MaterialItem.new("万年魚", [{ name: "魚介類" }, { name: "エリキシル" }]),
   MaterialItem.new("湖底のぬし", [{ name: "魚介類" }, { name: "ぷにぷに" }]),
+  //TODO: ここに未確認アイテムあり
   MaterialItem.new("ナナホシ", [{ name: "虫" }]),
   MaterialItem.new("ハニーアント", [{ name: "虫" }, { name: "調味料" }]),
   MaterialItem.new("灯篭ホタル", [{ name: "虫" }, { name: "神秘の力" }]),
@@ -217,6 +218,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("聖樹の大枝", [{ name: "木材" }, { name: "神秘の力" }]),
   MaterialItem.new("ウィングプラント", [{ name: "植物" }, { name: "気体" }]),
   MaterialItem.new("スカイバブル", [{ name: "気体" }]),
+  //TODO: ここに未確認アイテムあり
   MaterialItem.new("ぷにぷに玉・青", [{ name: "ぷにぷに" }]),
   MaterialItem.new("ぷにぷに玉・緑", [{ name: "ぷにぷに" }]),
   MaterialItem.new("ぷにぷに玉・赤", [{ name: "ぷにぷに" }]),
@@ -275,10 +277,12 @@ export const materialItems: MaterialItem[] = [
     { name: "神秘の力" },
     { name: "火薬" },
   ]),
+  //TODO: ここに未確認アイテムあり
   MaterialItem.new("エレメントコア・雷", [
     { name: "神秘の力" },
     { name: "砂" },
   ]),
+  //TODO: ここに未確認アイテムあり
   MaterialItem.new("竜肉", [{ name: "竜素材" }, { name: "食材" }]),
   MaterialItem.new("翼竜の翼", [{ name: "竜素材" }, { name: "気体" }]),
   MaterialItem.new("翼竜のタマゴ", [{ name: "竜素材" }, { name: "燃料" }]),
