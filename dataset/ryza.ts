@@ -398,6 +398,30 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
+  SynthesisItem.new("クライトレヘルン", [{ name: "爆弾" }], 33, {
+    items: [
+      { kind: "specific", item: { name: "レヘルン" } },
+      { kind: "specific", item: { name: "ガラスの花" } },
+      { kind: "category", category: { name: "水" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("シュトラプラジグ", [{ name: "爆弾" }], 34, {
+    items: [
+      { kind: "specific", item: { name: "プラジグ" } },
+      { kind: "specific", item: { name: "帯電砂" } },
+      { kind: "category", category: { name: "砂" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("レーツェルフト", [{ name: "爆弾" }], 30, {
+    items: [
+      { kind: "specific", item: { name: "ルフト" } },
+      { kind: "specific", item: { name: "ミストリキッド" } },
+      { kind: "category", category: { name: "気体" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
   SynthesisItem.new("ルナーランプ", [{ name: "魔法の道具" }], 44, {
     items: [
       { kind: "specific", item: { name: "セイントダイヤ" } },
@@ -435,6 +459,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "薬の材料" } },
       { kind: "category", category: { name: "花" } },
       { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
+  SynthesisItem.new("プニゼリー", [{ name: "食品" }], 12, {
+    items: [
+      { kind: "specific", item: { name: "ゼラチンパウダー" } },
+      { kind: "category", category: { name: "ぷにぷに" } },
+      { kind: "category", category: { name: "薬の材料" } },
+      { kind: "category", category: { name: "水" } },
     ],
   }),
   SynthesisItem.new("ラーゼンプディング", [{ name: "食品" }], 14, {
@@ -482,6 +514,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "specific", item: { name: "ハチミツ" } },
       { kind: "specific", item: { name: "変異トーン" } },
       { kind: "category", category: { name: "ハチの巣" } },
+      { kind: "category", category: { name: "木の実" } },
+    ],
+  }),
+  SynthesisItem.new("カクテルレープ", [{ name: "食品" }], 38, {
+    items: [
+      { kind: "specific", item: { name: "翼竜のタマゴ" } },
+      { kind: "specific", item: { name: "ラーゼンプディング" } },
+      { kind: "category", category: { name: "食材" } },
       { kind: "category", category: { name: "木の実" } },
     ],
   }),
@@ -547,6 +587,22 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "specific", item: { name: "デルフィローズ香" } },
       { kind: "category", category: { name: "気体" } },
       { kind: "category", category: { name: "神秘の力" } },
+    ],
+  }),
+  SynthesisItem.new("妖薬エボニアル", [{ name: "薬品" }], 33, {
+    items: [
+      { kind: "specific", item: { name: "禁忌の雫" } },
+      { kind: "specific", item: { name: "エスプラント" } },
+      { kind: "category", category: { name: "虫" } },
+      { kind: "category", category: { name: "魚介類" } },
+    ],
+  }),
+  SynthesisItem.new("ヒロイックガイスト", [{ name: "魔法の道具" }], 42, {
+    items: [
+      { kind: "specific", item: { name: "ミストリキッド" } },
+      { kind: "specific", item: { name: "エーテルアクア" } },
+      { kind: "category", category: { name: "竜素材" } },
+      { kind: "category", category: { name: "気体" } },
     ],
   }),
   SynthesisItem.new("時空の天文時計", [{ name: "魔法の道具" }], 44, {
@@ -958,6 +1014,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "specific", item: { name: "ポイズンキューブ" } },
       { kind: "category", category: { name: "竜素材" } },
       { kind: "category", category: { name: "毒の材料" } },
+    ],
+  }),
+  SynthesisItem.new("帯電砂", [{ name: "砂" }], 35, {
+    items: [
+      { kind: "specific", item: { name: "エメラルドグラス" } },
+      { kind: "specific", item: { name: "雷の呼び鈴" } },
+      { kind: "category", category: { name: "砂" } },
+      { kind: "category", category: { name: "金属" } },
     ],
   }),
   SynthesisItem.new("マーブルストーン", [{ name: "石材" }], 36, {
@@ -1402,10 +1466,10 @@ export const appendCategoryEffects: AppendCategoryEffect[] = [
       "超鋼ギア",
     ],
   },
-  // 金属 コンパス 鎌斧
+  // 金属 コンパス 鎌斧 帯電砂
   {
     category: { name: "金属" },
-    items: ["コンパス", "鎌斧"],
+    items: ["コンパス", "鎌斧", "帯電砂"],
   },
   // 宝石 精霊の小瓶
   {
