@@ -1252,14 +1252,14 @@ export const synthesisItems: SynthesisItem[] = [
   }),
 ];
 
-interface AppendCategoryEffectItem {
+interface AppendCategoryEffect {
   category: SynthesisCategory;
   items: string[];
 }
 
 // コメントで重複した内容を書いているのは、Copilotにボイラープレートを生成してもらうため
 
-export const appendCategoryEffectItems: AppendCategoryEffectItem[] = [
+export const appendCategoryEffects: AppendCategoryEffect[] = [
   // 水 聖なる雫
   {
     category: { name: "水" },
