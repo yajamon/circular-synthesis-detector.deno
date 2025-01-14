@@ -429,6 +429,15 @@ export const synthesisItems: SynthesisItem[] = [
     ],
   }),
   //TODO: ここに未確認アイテムあり
+  SynthesisItem.new("創生の槌", [{ name: "魔法の道具" }], 38, {
+    items: [
+      { kind: "specific", item: { name: "マーブルストーン" } },
+      { kind: "specific", item: { name: "創生の逆さ石" } },
+      { kind: "category", category: { name: "竜素材" } },
+      { kind: "category", category: { name: "金属" } },
+    ],
+  }),
+  //TODO: ここに未確認アイテムあり
   SynthesisItem.new("ルナーランプ", [{ name: "魔法の道具" }], 44, {
     items: [
       { kind: "specific", item: { name: "セイントダイヤ" } },
