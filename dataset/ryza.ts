@@ -66,7 +66,7 @@ export const materialItems: MaterialItem[] = [
     { name: "薬の材料" },
     { name: "エリキシル" },
   ]),
-  //TODO: ここに未確認アイテムあり
+  MaterialItem.new("エスプラント", [{ name: "花" }, { name: "毒の材料" }]),
   MaterialItem.new("デルフィローズ", [{ name: "花" }, { name: "糸素材" }]),
   MaterialItem.new("トーン", [{ name: "薬の材料" }, { name: "植物" }]),
   MaterialItem.new("セイタカトーン", [{ name: "薬の材料" }, { name: "植物" }]),
@@ -147,7 +147,7 @@ export const materialItems: MaterialItem[] = [
   MaterialItem.new("パルマ樹皮", [{ name: "燃料" }, { name: "木材" }]),
   MaterialItem.new("自然油", [{ name: "燃料" }]),
   MaterialItem.new("白煙炭", [{ name: "燃料" }]),
-  //TODO: ここに未確認アイテムあり
+  MaterialItem.new("パルマ黒炭", [{ name: "燃料" }]),
   MaterialItem.new("ノライモ", [{ name: "食材" }]),
   MaterialItem.new("ケモノ肉", [{ name: "食材" }]),
   MaterialItem.new("新鮮な肉", [{ name: "食材" }]),
@@ -277,10 +277,17 @@ export const materialItems: MaterialItem[] = [
     { name: "神秘の力" },
     { name: "火薬" },
   ]),
-  //TODO: ここに未確認アイテムあり
+  MaterialItem.new("エレメントコア・氷", [
+    { name: "神秘の力" },
+    { name: "水" },
+  ]),
   MaterialItem.new("エレメントコア・雷", [
     { name: "神秘の力" },
     { name: "砂" },
+  ]),
+  MaterialItem.new("エレメントコア・風", [
+    { name: "神秘の力" },
+    { name: "気体" },
   ]),
   //TODO: ここに未確認アイテムあり
   MaterialItem.new("竜肉", [{ name: "竜素材" }, { name: "食材" }]),
@@ -428,7 +435,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
-  //TODO: ここに未確認アイテムあり
+  SynthesisItem.new("誘引火瓶", [{ name: "魔法の道具" }], 36, {
+    items: [
+      { kind: "specific", item: { name: "ローゼフラム" } },
+      { kind: "specific", item: { name: "蒼炎の種火" } },
+      { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
   SynthesisItem.new("創生の槌", [{ name: "魔法の道具" }], 38, {
     items: [
       { kind: "specific", item: { name: "マーブルストーン" } },
@@ -875,7 +889,19 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
-  //TODO: ここに未確認アイテムあり
+  SynthesisItem.new(
+    "ゴルドテリオン",
+    [{ name: "インゴット" }, { name: "金属" }],
+    45,
+    {
+      items: [
+        { kind: "specific", item: { name: "ゴルディナイト" } },
+        { kind: "specific", item: { name: "セプトリエン" } },
+        { kind: "category", category: { name: "竜素材" } },
+        { kind: "category", category: { name: "中和剤" } },
+      ],
+    },
+  ),
   SynthesisItem.new("クロース", [{ name: "クロース" }], 2, {
     items: [
       { kind: "category", category: { name: "糸素材" } },
@@ -922,7 +948,19 @@ export const synthesisItems: SynthesisItem[] = [
       ],
     },
   ),
-  //TODO: ここに未確認アイテムあり
+  SynthesisItem.new(
+    "エルドロコード",
+    [{ name: "クロース" }, { name: "宝石" }],
+    45,
+    {
+      items: [
+        { kind: "specific", item: { name: "ヘブンズストリング" } },
+        { kind: "specific", item: { name: "幻獣の毛皮" } },
+        { kind: "category", category: { name: "糸素材" } },
+        { kind: "category", category: { name: "中和剤" } },
+      ],
+    },
+  ),
   SynthesisItem.new("パールクリスタル", [{ name: "宝石" }], 13, {
     items: [
       { kind: "specific", item: { name: "大貝の白玉" } },
