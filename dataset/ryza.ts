@@ -66,7 +66,7 @@ export const materialItems: MaterialItem[] = [
     { name: "薬の材料" },
     { name: "エリキシル" },
   ]),
-  //TODO: ここに未確認アイテムあり
+  MaterialItem.new("エスプラント", [{ name: "花" }, { name: "毒の材料" }]),
   MaterialItem.new("デルフィローズ", [{ name: "花" }, { name: "糸素材" }]),
   MaterialItem.new("トーン", [{ name: "薬の材料" }, { name: "植物" }]),
   MaterialItem.new("セイタカトーン", [{ name: "薬の材料" }, { name: "植物" }]),
@@ -277,7 +277,10 @@ export const materialItems: MaterialItem[] = [
     { name: "神秘の力" },
     { name: "火薬" },
   ]),
-  //TODO: ここに未確認アイテムあり
+  MaterialItem.new("エレメントコア・氷", [
+    { name: "神秘の力" },
+    { name: "水" },
+  ]),
   MaterialItem.new("エレメントコア・雷", [
     { name: "神秘の力" },
     { name: "砂" },
@@ -432,7 +435,14 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "中和剤" } },
     ],
   }),
-  //TODO: ここに未確認アイテムあり
+  SynthesisItem.new("誘引火瓶", [{ name: "魔法の道具" }], 36, {
+    items: [
+      { kind: "specific", item: { name: "ローゼフラム" } },
+      { kind: "specific", item: { name: "蒼炎の種火" } },
+      { kind: "category", category: { name: "燃料" } },
+      { kind: "category", category: { name: "中和剤" } },
+    ],
+  }),
   SynthesisItem.new("創生の槌", [{ name: "魔法の道具" }], 38, {
     items: [
       { kind: "specific", item: { name: "マーブルストーン" } },
