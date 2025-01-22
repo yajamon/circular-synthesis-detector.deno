@@ -1373,7 +1373,19 @@ export const synthesisItems: SynthesisItem[] = [
       { kind: "category", category: { name: "燃料" } },
     ],
   }),
-  //TODO: ここに未確認アイテムあり
+  SynthesisItem.new(
+    "赤の輝石",
+    [{ name: "エリキシル" }, { name: "神秘の力" }],
+    43,
+    {
+      items: [
+        { kind: "specific", item: { name: "異界のコア" } },
+        { kind: "specific", item: { name: "聖なる雫" } },
+        { kind: "specific", item: { name: "禁忌の雫" } },
+        { kind: "specific", item: { name: "竜眼" } },
+      ],
+    },
+  ),
 ];
 
 interface AppendCategoryEffect {
@@ -1399,10 +1411,16 @@ export const appendCategoryEffects: AppendCategoryEffect[] = [
     category: { name: "花" },
     items: ["中和剤・青", "クリスタルエレメント"],
   },
-  // 薬の材料 デルフィローズ香 パールクリスタル 超純水 強力な魚のエサ
+  // 薬の材料 デルフィローズ香 パールクリスタル 超純水 強力な魚のエサ 赤の輝石
   {
     category: { name: "薬の材料" },
-    items: ["デルフィローズ香", "パールクリスタル", "超純水", "強力な魚のエサ"],
+    items: [
+      "デルフィローズ香",
+      "パールクリスタル",
+      "超純水",
+      "強力な魚のエサ",
+      "赤の輝石",
+    ],
   },
   // 毒の材料 スピリナイト ヒーリングチップ 火薬のもと
   {
@@ -1487,6 +1505,11 @@ export const appendCategoryEffects: AppendCategoryEffect[] = [
       "ポイズンキューブ",
       "ミックスオイル",
     ],
+  },
+  // ぷにぷに 赤の輝石
+  {
+    category: { name: "ぷにぷに" },
+    items: ["赤の輝石"],
   },
   // 動物素材 ヘブンズストリング
   {
